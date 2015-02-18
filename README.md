@@ -22,7 +22,7 @@ var help = require("hiredhelp");
 ### Creating a worker   
 Create a new object with the only argument being the interval (in milliseconds) that you want the worker to check for new work.
 ```js
-var worker = new help(1000); // Check for new work every 1000 milliseconds
+var worker = new help.Worker(1000); // Check for new work every 1000 milliseconds
 ```  
 ###Starting/Stopping worker  
 This is pretty straightforward
