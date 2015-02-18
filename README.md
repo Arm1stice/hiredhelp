@@ -15,11 +15,11 @@ $ npm install hiredhelp
 
 Usage
 =====
-###RequireJS
+### RequireJS  
 ```js
 var help = require("hiredhelp");
 ```  
-###Creating a worker
+### Creating a worker   
 Create a new object with the only argument being the interval (in milliseconds) that you want the worker to check for new work.
 ```js
 var worker = new help(1000); // Check for new work every 1000 milliseconds
@@ -30,19 +30,19 @@ This is pretty straightforward
 worker.startWorker(); // Starts worker
 worker.stopWorker(); // Stops worker
 ```
-###Creating work
+### Creating work  
 Work is a premade function that is stored by the worker and can be called using the .perform() command
 ```js
 worker.createWork("name for work", function(){
     // Put what you want in here
 });
 ```
-###Performing work
+### Performing work  
 To perform work, just call .perform() with the first argument being the name of the work you want to call
 ```js
 worker.perform("name of work");
 ```
-###Passing arguments to work
+### Passing arguments to work
 If your tasks needs to accept arguments, just allow for the needed variables in the work function, and when using .perform(), place the required arguments after the name of the work
 ```js
 worker.createWork("add", function(number1, number2){
