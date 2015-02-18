@@ -1,0 +1,30 @@
+{
+  "name": "hiredhelp",
+  "version": "0.1.0",
+  "description": "A Node module that allows you to create worker functions to perform tasks placed into a queue",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^0.9.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arm1stice/hiredhelp"
+  },
+  "keywords": [
+    "worker",
+    "work",
+    "queue",
+    "hiredhelp"
+  ],
+  "author": "Wyatt Calandro <arm1stice.dev@gmail.com> (http://arm1stice.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arm1stice/hiredhelp/issues"
+  },
+  "homepage": "https://github.com/Arm1stice/hiredhelp"
+}
