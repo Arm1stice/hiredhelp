@@ -5,9 +5,7 @@ Tips
 ====
 As a free software developer, tips are appreciated. I am in no way poor, and this isn't going to a specific cause, however if you want to show your appreciation for my work, this is one way to do it.
 
-<div class="changetip_tipme_button" data-bid="JxHYnnYsxoh42AD23AkaBP" data-uid="E3M4Wi5zWsvseCFRwQEE34"></div>
-
-<script>(function(document,script,id){var js,r=document.getElementsByTagName(script)[0],protocol=/^http:/.test(document.location)?'http':'https';if(!document.getElementById(id)){js=document.createElement(script);js.id=id;js.src=protocol+'://widgets.changetip.com/public/js/widgets.js';r.parentNode.insertBefore(js,r)}}(document,'script','changetip_w_0'));</script>
+[Tip with ChangeTip](http://arm1stice.tip.me)
 
 Installation
 ============
