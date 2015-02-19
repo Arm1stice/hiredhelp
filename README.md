@@ -1,5 +1,5 @@
 ![HiredHelp](http://i58.tinypic.com/2ez19g7.jpg)  
-A Node module that allows you to create worker functions to perform tasks placed into a queue
+A Node module that allows you to create worker functions to perform tasks set by the user
 
 Tips
 ====
@@ -59,8 +59,6 @@ worker.perform("say", "Hello", function(words){
     console.log(words); // Prints "Hello" to console
 });
 ```
-Note: Every time .perform() is called, the work is added to a queue, and will not be completed until previous work in the queue has been completed
---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Contributing
 ============
