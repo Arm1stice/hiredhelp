@@ -15,15 +15,14 @@
 
 // Underscore makes our lives easier
 var under = require("underscore");
-// Async will help us with theroretical problems when we deal with completing work
-var async = require("async");
+// Sequence will help us with theroretical problems when we deal with completing work
+var Sequence = require("sequence").Sequence, sequence = Sequence.create();
 // Create the worker object
 var worker = function(interval){
   if(!under.isNumber(interval)) throw new Error("Argument must be an integer representing how often the worker will check for work (in milliseconds)");
   this._interval = interval;
   this._workList = {};
   this._postWork = {};
-  this._doingWork = false;
   this._workQueue = [];
 };
 
@@ -34,13 +33,18 @@ worker.prototype.startWorker = function(){
     if(this._workQueue.length < 1) return;
     this._doingWork = true;
     var job = this._workQueue[0];
-    async.parallel([function(callback){
+    
+    this._workList[job['name']].apply(null, job.args);
+      
+    this._workQueue.splice(0, 1);
+    this._doingWork = false;
+    /*async.parallel([function(callback){
         this._workList[job['name']].apply(null, job.args);
         callback();
       }.bind(this)], function(){
       this._workQueue.splice(0, 1);
       this._doingWork = false;
-    }.bind(this));
+    }.bind(this));*/
   };
   this._intervalFunction = setInterval(wFunc.bind(this), this._interval);
 };
@@ -68,4 +72,4 @@ worker.prototype.perform = function(){
    throw new Error("Work \"" + arguments[0] + "\" doesn't exist!");
  }
 };
-module.exports.Worker = worker;
+module.exports = worker;
