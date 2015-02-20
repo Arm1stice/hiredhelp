@@ -15,8 +15,7 @@
 
 // Underscore makes our lives easier
 var under = require("underscore");
-// Sequence will help us with theroretical problems when we deal with completing work
-var Sequence = require("sequence").Sequence, sequence = Sequence.create();
+
 // Create the worker object
 var worker = function(interval){
   if(!under.isNumber(interval)) throw new Error("Argument must be an integer representing how often the worker will check for work (in milliseconds)");
@@ -29,15 +28,12 @@ var worker = function(interval){
 // Declare prototype functions to start and stop the worker
 worker.prototype.startWorker = function(){
   var wFunc = function(){
-    if(this._doingWork) return;
     if(this._workQueue.length < 1) return;
-    this._doingWork = true;
     var job = this._workQueue[0];
     
     this._workList[job['name']].apply(null, job.args);
       
     this._workQueue.splice(0, 1);
-    this._doingWork = false;
     /*async.parallel([function(callback){
         this._workList[job['name']].apply(null, job.args);
         callback();

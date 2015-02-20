@@ -1,11 +1,9 @@
 {
   "name": "hiredhelp",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Node module that allows you to create worker functions to perform tasks set by the user",
   "main": "index.js",
   "dependencies": {
-    "async": "^0.9.0",
-    "sequence": "^3.0.0",
     "underscore": "^1.7.0"
   },
   "devDependencies": {},
@@ -19,7 +17,6 @@
   "keywords": [
     "worker",
     "work",
-    "queue",
     "hiredhelp"
   ],
   "author": "Wyatt Calandro <arm1stice.dev@gmail.com> (http://arm1stice.com/)",
