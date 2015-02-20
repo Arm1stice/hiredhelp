@@ -1,6 +1,6 @@
 {
   "name": "hiredhelp",
-  "version": "0.1.7",
+  "version": "0.1.",
   "description": "A Node module that allows you to create worker functions to perform tasks set by the user",
   "main": "index.js",
   "dependencies": {
